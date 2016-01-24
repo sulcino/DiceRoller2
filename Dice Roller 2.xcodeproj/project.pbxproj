@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112DA17F1C53D6760085A6C3 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112DA17E1C53D6760085A6C3 /* SecondBeep.wav */; };
+		115E55591C4E381600B3BB86 /* RDCVectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E55551C4E381600B3BB86 /* RDCVectorButton.swift */; };
+		115E555A1C4E381600B3BB86 /* RDCSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E55561C4E381600B3BB86 /* RDCSwitch.swift */; };
+		115E555B1C4E381600B3BB86 /* RDCVectorButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E55571C4E381600B3BB86 /* RDCVectorButtonDelegate.swift */; };
+		115E555C1C4E381600B3BB86 /* RDCSwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E55581C4E381600B3BB86 /* RDCSwitchDelegate.swift */; };
+		11CC68351C4A8ED60035534F /* Roller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC68341C4A8ED60035534F /* Roller.swift */; };
+		11CC68371C4A9DAC0035534F /* RollerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC68361C4A9DAC0035534F /* RollerDataSource.swift */; };
 		11F8EC411C49AB4300C4F820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8EC401C49AB4300C4F820 /* AppDelegate.swift */; };
 		11F8EC431C49AB4300C4F820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8EC421C49AB4300C4F820 /* ViewController.swift */; };
 		11F8EC461C49AB4400C4F820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F8EC441C49AB4400C4F820 /* Main.storyboard */; };
 		11F8EC481C49AB4400C4F820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F8EC471C49AB4400C4F820 /* Assets.xcassets */; };
 		11F8EC4B1C49AB4400C4F820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F8EC491C49AB4400C4F820 /* LaunchScreen.storyboard */; };
+		11F8EC531C49AF4C00C4F820 /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8EC521C49AF4C00C4F820 /* Die.swift */; };
+		11F8EC551C49AF6400C4F820 /* DicePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8EC541C49AF6400C4F820 /* DicePool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112DA17E1C53D6760085A6C3 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
+		115E55551C4E381600B3BB86 /* RDCVectorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDCVectorButton.swift; sourceTree = "<group>"; };
+		115E55561C4E381600B3BB86 /* RDCSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDCSwitch.swift; sourceTree = "<group>"; };
+		115E55571C4E381600B3BB86 /* RDCVectorButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDCVectorButtonDelegate.swift; sourceTree = "<group>"; };
+		115E55581C4E381600B3BB86 /* RDCSwitchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDCSwitchDelegate.swift; sourceTree = "<group>"; };
+		11CC68341C4A8ED60035534F /* Roller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roller.swift; sourceTree = "<group>"; };
+		11CC68361C4A9DAC0035534F /* RollerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollerDataSource.swift; sourceTree = "<group>"; };
 		11F8EC3D1C49AB4300C4F820 /* Dice Roller 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Roller 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F8EC401C49AB4300C4F820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F8EC421C49AB4300C4F820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +38,8 @@
 		11F8EC471C49AB4400C4F820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F8EC4A1C49AB4400C4F820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F8EC4C1C49AB4400C4F820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F8EC521C49AF4C00C4F820 /* Die.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Die.swift; sourceTree = "<group>"; };
+		11F8EC541C49AF6400C4F820 /* DicePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicePool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115E55541C4D74EC00B3BB86 /* RDC button */ = {
+			isa = PBXGroup;
+			children = (
+				115E55551C4E381600B3BB86 /* RDCVectorButton.swift */,
+				115E55561C4E381600B3BB86 /* RDCSwitch.swift */,
+				115E55571C4E381600B3BB86 /* RDCVectorButtonDelegate.swift */,
+				115E55581C4E381600B3BB86 /* RDCSwitchDelegate.swift */,
+			);
+			name = "RDC button";
+			sourceTree = "<group>";
+		};
 		11F8EC341C49AB4300C4F820 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +85,16 @@
 			children = (
 				11F8EC401C49AB4300C4F820 /* AppDelegate.swift */,
 				11F8EC421C49AB4300C4F820 /* ViewController.swift */,
+				11F8EC521C49AF4C00C4F820 /* Die.swift */,
+				11F8EC541C49AF6400C4F820 /* DicePool.swift */,
+				11CC68341C4A8ED60035534F /* Roller.swift */,
+				11CC68361C4A9DAC0035534F /* RollerDataSource.swift */,
+				115E55541C4D74EC00B3BB86 /* RDC button */,
 				11F8EC441C49AB4400C4F820 /* Main.storyboard */,
-				11F8EC471C49AB4400C4F820 /* Assets.xcassets */,
 				11F8EC491C49AB4400C4F820 /* LaunchScreen.storyboard */,
+				11F8EC471C49AB4400C4F820 /* Assets.xcassets */,
 				11F8EC4C1C49AB4400C4F820 /* Info.plist */,
+				112DA17E1C53D6760085A6C3 /* SecondBeep.wav */,
 			);
 			path = "Dice Roller 2";
 			sourceTree = "<group>";
@@ -125,6 +160,7 @@
 			files = (
 				11F8EC4B1C49AB4400C4F820 /* LaunchScreen.storyboard in Resources */,
 				11F8EC481C49AB4400C4F820 /* Assets.xcassets in Resources */,
+				112DA17F1C53D6760085A6C3 /* SecondBeep.wav in Resources */,
 				11F8EC461C49AB4400C4F820 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115E555C1C4E381600B3BB86 /* RDCSwitchDelegate.swift in Sources */,
+				11F8EC551C49AF6400C4F820 /* DicePool.swift in Sources */,
+				11CC68351C4A8ED60035534F /* Roller.swift in Sources */,
+				11CC68371C4A9DAC0035534F /* RollerDataSource.swift in Sources */,
 				11F8EC431C49AB4300C4F820 /* ViewController.swift in Sources */,
 				11F8EC411C49AB4300C4F820 /* AppDelegate.swift in Sources */,
+				115E555B1C4E381600B3BB86 /* RDCVectorButtonDelegate.swift in Sources */,
+				115E555A1C4E381600B3BB86 /* RDCSwitch.swift in Sources */,
+				11F8EC531C49AF4C00C4F820 /* Die.swift in Sources */,
+				115E55591C4E381600B3BB86 /* RDCVectorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.davidrak.Dice-Roller-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -265,6 +310,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.davidrak.Dice-Roller-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -287,6 +333,7 @@
 				11F8EC511C49AB4400C4F820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -85,12 +85,13 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	
 	override func viewDidAppear(animated: Bool) {
 		updateButtonsFrames()
-		updateLabelsFontSizes()
+		updateLabelsFont()
 	}
 	
 
 	override func viewDidLayoutSubviews() {
-
+		updateButtonsFrames()
+		updateLabelsFont()
 	}
 	
 	
@@ -147,13 +148,43 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		
 		plusButton = RDCVectorButton(frame: plusPlaceHolder.bounds)
 		plusButton.buttonColor = UIColor.whiteColor().CGColor
+		plusButton.symbolColor = UIColor.whiteColor().CGColor
 		plusButton.selected = false
+		plusButton.buttonSymbolDrawer = {(width: CGFloat, height: CGFloat) -> UIBezierPath in
+			let path = UIBezierPath()
+			path.moveToPoint(CGPoint(x: width * 0.26, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.46, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.46, y: height * 0.26))
+			path.addLineToPoint(CGPoint(x: width * 0.54, y: height * 0.26))
+			path.addLineToPoint(CGPoint(x: width * 0.54, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.74, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.74, y: height * 0.54))
+			path.addLineToPoint(CGPoint(x: width * 0.54, y: height * 0.54))
+			path.addLineToPoint(CGPoint(x: width * 0.54, y: height * 0.74))
+			path.addLineToPoint(CGPoint(x: width * 0.46, y: height * 0.74))
+			path.addLineToPoint(CGPoint(x: width * 0.46, y: height * 0.54))
+			path.addLineToPoint(CGPoint(x: width * 0.26, y: height * 0.54))
+			path.closePath()
+			return path
+		}
 		plusPlaceHolder.addSubview(plusButton)
+		plusButton.addTarget(self, action: "plusButtonAction", forControlEvents: .TouchUpInside)
 		
 		minusButton = RDCVectorButton(frame: minusPlaceHolder.bounds)
 		minusButton.buttonColor = UIColor.whiteColor().CGColor
+		minusButton.symbolColor = UIColor.whiteColor().CGColor
 		minusButton.selected = false
+		minusButton.buttonSymbolDrawer = {(width: CGFloat, height: CGFloat) -> UIBezierPath in
+			let path = UIBezierPath()
+			path.moveToPoint(CGPoint(x: width * 0.26, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.74, y: height * 0.46))
+			path.addLineToPoint(CGPoint(x: width * 0.74, y: height * 0.54))
+			path.addLineToPoint(CGPoint(x: width * 0.26, y: height * 0.54))
+			path.closePath()
+			return path
+		}
 		minusPlaceHolder.addSubview(minusButton)
+		minusButton.addTarget(self, action: "minusButtonAction", forControlEvents: .TouchUpInside)
 		
 		addSwitch = RDCSwitch(buttons: [addDieButton, addValueButton])
 
@@ -187,25 +218,16 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	
 	
 	// nastavení velikosti písma podle velikosti view
-	func updateLabelsFontSizes() {
-		successesLabel.font = UIFont(
-			name: successesLabel.font.fontName,
-			size: CGFloat(successesLabel.bounds.height * 0.65))
-		successesDisplay.font = UIFont(
-			name: successesDisplay.font.fontName,
-			size: CGFloat(successesDisplay.bounds.height * 0.9))
-		onesLabel.font = UIFont(
-			name: onesLabel.font.fontName,
-			size: CGFloat(onesLabel.bounds.height * 0.65))
-		onesDisplay.font = UIFont(
-			name: onesDisplay.font.fontName,
-			size: CGFloat(onesDisplay.bounds.height * 0.9))
-		dicePoolLabel.font = UIFont(
-			name: dicePoolLabel.font.fontName,
-			size: CGFloat(dicePoolLabel.bounds.height * 0.65))
-		dicePoolDisplay.font = UIFont(
-			name: dicePoolDisplay.font.fontName,
-			size: CGFloat(dicePoolDisplay.bounds.height * 0.9))
+	func updateLabelsFont() {
+		let currentTraitCollection = view.traitCollection
+		switch (currentTraitCollection.horizontalSizeClass, currentTraitCollection.verticalSizeClass) {
+		case (.Compact, .Regular):
+			successesLabel.textAlignment = .Right
+		case (_, .Compact):
+			successesLabel.textAlignment = .Center
+		default:
+			print("updateLabelsFont - uncaught combination of size classes")
+		}
 	}
 	
 	
@@ -282,10 +304,26 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	}
 	
 	
-	func subtractOnesSwitched() {
-		subtractOnes = subtractOnesButton.selected
-		roller?.updateDicePool()
+	func plusButtonAction() {
+		if roller == nil { return }
+		roller?.addDice(pickerHowMuchDice.selectedRowInComponent(0) + 1)
 		updateResults()
+	}
+	
+	
+	func minusButtonAction() {
+		if roller == nil { return }
+		roller?.subtractDice(pickerHowMuchDice.selectedRowInComponent(0) + 1)
+		updateResults()
+	}
+	
+	
+	func subtractOnesSwitched() {
+		if roller != nil {
+			subtractOnes = subtractOnesButton.selected
+			roller?.updateDicePool()
+			updateResults()
+		}
 	}
 	
 	

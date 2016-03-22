@@ -64,4 +64,14 @@ class Roller {
 		dicePool?.subtractOnes = dataSource.subtractOnes
 	}
 	
+	
+	func addDice(howMany: Int) {
+		dicePool?.addDice(howMany)
+	}
+	
+	
+	func subtractDice(howMany: Int) {
+		dicePool?.removeDice(howMany)
+	}
+	
 }

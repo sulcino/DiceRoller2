@@ -67,6 +67,15 @@ class RDCVectorButton: UIControl {
 		}
 	}
 	
+	var buttonSymbolDrawer: ((width: CGFloat, heith: CGFloat) -> UIBezierPath)? {
+		set {
+			renderer.drawSymbol = newValue
+		}
+		get {
+			return renderer.drawSymbol
+		}
+	}
+	
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -86,6 +95,7 @@ class RDCVectorButton: UIControl {
 		renderer.updateShapes()
 		
 		layer.addSublayer(renderer.buttonLayer)
+		layer.addSublayer(renderer.symbolLayer)
 	}
 	
 	
@@ -167,9 +177,12 @@ private class RDCVectorButtonRenderer {
 	var shapeDeselected = UIBezierPath()
 	var shapeHighlightedSelected = UIBezierPath()
 	var shapeHighlightedDeselected = UIBezierPath()
+	var shapeSymbol = UIBezierPath()
 	
 	var buttonLayer = CAShapeLayer()
 	var symbolLayer = CAShapeLayer()
+	
+	var drawSymbol: ((width: CGFloat, height: CGFloat) -> UIBezierPath)?
 	
 	let animationDuration = CFTimeInterval(0.07)
 	
@@ -199,14 +212,16 @@ private class RDCVectorButtonRenderer {
 			buttonLayer.path = path.CGPath
 		}
 		
+		symbolLayer.path = drawSymbol?(width: button.bounds.width, height: button.bounds.height).CGPath
+		
 		if button.enabled {
-			button.layer.opacity = 1.0
+			button.alpha = 1.0
 		} else {
-			button.layer.opacity = Float(button.disabledAlpha)
+			button.alpha = CGFloat(button.disabledAlpha)
 		}
 
 		switch button.state {
-			// Disabled
+		// Disabled
 //		case UIControlState.Disabled:
 //			print("updateShape switch: .Disabled")
 			

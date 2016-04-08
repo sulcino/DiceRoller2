@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -514,6 +514,9 @@ Cg
                                         <include reference="Qs4-rb-H2P"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="46" y="-38" width="40" height="84"/>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LLZ-uA-yIu">
                                 <rect key="frame" x="180" y="116" width="150" height="171"/>
@@ -539,9 +542,11 @@ ones</string>
                                                 <variation key="heightClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="37" width="106" height="32"/>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <variation key="heightClass=regular-widthClass=compact">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <rect key="frame" x="1" y="37" width="107" height="33"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="34" width="97" height="29"/>
                                                 </variation>
                                             </label>
                                         </subviews>
@@ -567,6 +572,9 @@ ones</string>
                                                 <include reference="Ny3-AZ-5ub"/>
                                                 <include reference="hpa-HK-sgH"/>
                                             </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="-34" width="97" height="97"/>
                                         </variation>
                                     </view>
                                 </subviews>
@@ -599,6 +607,12 @@ ones</string>
                                         <include reference="iSi-5R-WTJ"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="115" y="40" width="106" height="320"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="123" y="40" width="106" height="320"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="i29-R9-6f3"/>
@@ -609,6 +623,9 @@ ones</string>
                                         <include reference="jkt-Pm-wVt"/>
                                         <include reference="qOj-yt-cfo"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="3" y="75" width="8" height="18"/>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNo-ol-WU4">
@@ -650,9 +667,6 @@ ones</string>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="60"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="6" width="124" height="72"/>
-                                                </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

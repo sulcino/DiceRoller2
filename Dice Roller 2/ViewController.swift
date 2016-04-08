@@ -116,14 +116,14 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		subtractOnesButton.selected = subtractOnes
 		subtractOnesButton.switchable = true
 		subtractOnesPlaceHolder.addSubview(subtractOnesButton)
-		subtractOnesButton.addTarget(self, action: "subtractOnesSwitched", forControlEvents: UIControlEvents.ValueChanged)
+		subtractOnesButton.addTarget(self, action: #selector(ViewController.subtractOnesSwitched), forControlEvents: UIControlEvents.ValueChanged)
 		
 		maxAgainButton = RDCVectorButton(frame: maxAgainPlaceHolder.bounds)
 		maxAgainButton.buttonColor = UIColor.whiteColor().CGColor
 		maxAgainButton.selected = maxAgain
 		maxAgainButton.switchable = true
 		maxAgainPlaceHolder.addSubview(maxAgainButton)
-		maxAgainButton.addTarget(self, action: "maxAgainButtonSwitched",
+		maxAgainButton.addTarget(self, action: #selector(ViewController.maxAgainButtonSwitched),
 			forControlEvents: UIControlEvents.ValueChanged)
 		
 		addDieButton = RDCVectorButton(frame: addDiePlaceHolder.bounds)
@@ -144,7 +144,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		rollButton.outerCircleHighlighted = 0.9
 		rollButton.innerCircleHighlighted = 0.84
 		rollPlaceHolder.addSubview(rollButton)
-		rollButton.addTarget(self, action: "rollButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+		rollButton.addTarget(self, action: #selector(ViewController.rollButtonAction), forControlEvents: UIControlEvents.TouchUpInside)
 		
 		plusButton = RDCVectorButton(frame: plusPlaceHolder.bounds)
 		plusButton.buttonColor = UIColor.whiteColor().CGColor
@@ -168,7 +168,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 			return path
 		}
 		plusPlaceHolder.addSubview(plusButton)
-		plusButton.addTarget(self, action: "plusButtonAction", forControlEvents: .TouchUpInside)
+		plusButton.addTarget(self, action: #selector(ViewController.plusButtonAction), forControlEvents: .TouchUpInside)
 		
 		minusButton = RDCVectorButton(frame: minusPlaceHolder.bounds)
 		minusButton.buttonColor = UIColor.whiteColor().CGColor
@@ -184,7 +184,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 			return path
 		}
 		minusPlaceHolder.addSubview(minusButton)
-		minusButton.addTarget(self, action: "minusButtonAction", forControlEvents: .TouchUpInside)
+		minusButton.addTarget(self, action: #selector(ViewController.minusButtonAction), forControlEvents: .TouchUpInside)
 		
 		addSwitch = RDCSwitch(buttons: [addDieButton, addValueButton])
 

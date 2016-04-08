@@ -17,7 +17,7 @@ class Roller {
 		var x = 0
 		for die in dicePool!.dice {
 			if die.value >= dataSource.targetNumber {
-				x++
+				x += 1
 			}
 		}
 		if dicePool!.subtractOnes {
@@ -30,7 +30,7 @@ class Roller {
 		var x = 0
 		for die in dicePool!.dice {
 			if die.value == 1 {
-				x++
+				x += 1
 			}
 		}
 		return x

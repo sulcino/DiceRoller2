@@ -37,7 +37,7 @@ class RDCSwitch: NSObject, RDCVectorButtonDelegate {
 			if button !== sender {
 				button.canBeSwitched = true
 				button.selected = false
-				x++
+				x += 1
 			} else {
 				button.canBeSwitched = false
 				selectedButton = x

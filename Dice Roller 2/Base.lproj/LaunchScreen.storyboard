@@ -19,27 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw0-wb-XBD">
-                                <rect key="frame" x="0.0" y="150" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="120" width="600" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-Zd-NtV">
-                                <rect key="frame" x="0.0" y="180" width="600" height="240"/>
+                                <rect key="frame" x="0.0" y="150" width="600" height="300"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo RDC" translatesAutoresizingMaskIntoConstraints="NO" id="LeR-my-JSs">
-                                <rect key="frame" x="0.0" y="444" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="474" width="600" height="90"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RDCode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-JH-LaP">
-                                <rect key="frame" x="0.0" y="534" width="600" height="18"/>
+                                <rect key="frame" x="0.0" y="564" width="600" height="18"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqJ-h2-xfH">
-                                <rect key="frame" x="0.0" y="420" width="600" height="24"/>
+                                <rect key="frame" x="0.0" y="450" width="600" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Roller 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-Qk-zjB">
-                                <rect key="frame" x="0.0" y="102" width="600" height="48"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="48"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="trailing" secondItem="uw0-wb-XBD" secondAttribute="trailing" id="ASJ-Ra-JJi"/>
                             <constraint firstItem="dqJ-h2-xfH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Bw9-om-RPq"/>
                             <constraint firstItem="uw0-wb-XBD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="CFY-Ja-xu2"/>
-                            <constraint firstItem="UmP-Zd-NtV" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="D6q-5g-y97"/>
+                            <constraint firstItem="UmP-Zd-NtV" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.5" id="D6q-5g-y97"/>
                             <constraint firstItem="LeR-my-JSs" firstAttribute="top" secondItem="dqJ-h2-xfH" secondAttribute="bottom" id="EH9-H6-ETb"/>
                             <constraint firstAttribute="trailing" secondItem="LeR-my-JSs" secondAttribute="trailing" id="J1D-qe-jjt"/>
                             <constraint firstItem="4N6-JH-LaP" firstAttribute="top" secondItem="LeR-my-JSs" secondAttribute="bottom" id="McT-NQ-URf"/>

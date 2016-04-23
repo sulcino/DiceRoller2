@@ -15,12 +15,26 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	var numberOfDice: Int = 1
 	var sides: Int = 6
 	var targetNumber: Int = 5
-	var maxAgain: Bool = false {
-		didSet { maxAgainButton.selected = maxAgain } }
-	var maxAddDie: Bool = true
-	var maxAddValue: Bool = false
-	var subtractOnes: Bool = false {
-		didSet { subtractOnesButton.selected = subtractOnes } }
+	var maxAgain: Bool {
+		get { return maxAgainButton.selected }
+		set { maxAgainButton.selected = newValue }
+	}
+	var maxAddDie: Bool {
+		get { return addDieButton.selected }
+		set {
+			addDieButton.selected = newValue
+		}
+	}
+	var maxAddValue: Bool {
+		get { return addValueButton.selected }
+		set {
+			addValueButton.selected = newValue
+		}
+	}
+	var subtractOnes: Bool {
+		get { return subtractOnesButton.selected }
+		set { subtractOnesButton.selected = newValue }
+	}
 	var roller: Roller?
 	
 	@IBOutlet weak var successesLabel: UILabel!
@@ -34,6 +48,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	@IBOutlet weak var maxAgainPlaceHolder: UIView!
 	@IBOutlet weak var addDiePlaceHolder: UIView!
 	@IBOutlet weak var addValuePlaceHolder: UIView!
+	@IBOutlet weak var lockPlaceHolder: UIView!
 	
 	@IBOutlet weak var rollPlaceHolder: UIView!
 	@IBOutlet weak var plusPlaceHolder: UIView!
@@ -48,6 +63,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	var addDieButton: RDCVectorButton!
 	var addValueButton: RDCVectorButton!
 	var addSwitch: RDCSwitch!
+	var lockPickersButton: RDCVectorButton!
 	
 	var rollButton: RDCVectorButton!
 	var plusButton: RDCVectorButton!
@@ -96,7 +112,6 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	
 	
 	func maxAgainButtonSwitched() {
-		maxAgain = maxAgainButton.selected
 		addDieButton.enabled = maxAgainButton.selected
 		addValueButton.enabled = maxAgainButton.selected
 	}
@@ -128,13 +143,22 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		
 		addDieButton = RDCVectorButton(frame: addDiePlaceHolder.bounds)
 		addDieButton.buttonColor = UIColor.whiteColor().CGColor
-		addDieButton.selected = false
+		addDieButton.selected = true
+		addDieButton.switchable = true
 		addDiePlaceHolder.addSubview(addDieButton)
 		
 		addValueButton = RDCVectorButton(frame: addValuePlaceHolder.bounds)
 		addValueButton.buttonColor = UIColor.whiteColor().CGColor
+		addValueButton.switchable = true
 		addValueButton.selected = false
 		addValuePlaceHolder.addSubview(addValueButton)
+		
+		lockPickersButton = RDCVectorButton(frame: lockPlaceHolder.bounds)
+		lockPickersButton.buttonColor = UIColor.whiteColor().CGColor
+		lockPickersButton.switchable = true
+		lockPickersButton.selected = false
+		lockPickersButton.addTarget(self, action: #selector(ViewController.lockPickersButtonAction), forControlEvents: UIControlEvents.ValueChanged)
+		lockPlaceHolder.addSubview(lockPickersButton)
 
 		rollButton = RDCVectorButton(frame: rollPlaceHolder.bounds)
 		rollButton.buttonColor = UIColor.whiteColor().CGColor
@@ -186,12 +210,13 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		minusPlaceHolder.addSubview(minusButton)
 		minusButton.addTarget(self, action: #selector(ViewController.minusButtonAction), forControlEvents: .TouchUpInside)
 		
-		addSwitch = RDCSwitch(buttons: [addDieButton, addValueButton])
-
-		addDieButton.enabled = maxAgain
+		// setup switch and it's buttons
 		addDieButton.selected = maxAddDie
-		addValueButton.enabled = maxAgain
 		addValueButton.selected = maxAddValue
+		addDieButton.enabled = maxAgain
+		addValueButton.enabled = maxAgain
+		
+		addSwitch = RDCSwitch(buttons: [addDieButton, addValueButton])
 }
 	
 	
@@ -206,6 +231,8 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		addDieButton.update()
 		addValueButton.frame = addValuePlaceHolder.bounds
 		addValueButton.update()
+		lockPickersButton.frame = lockPlaceHolder.bounds
+		lockPickersButton.update()
 		
 		rollButton.frame = rollPlaceHolder.bounds
 		rollButton.update()
@@ -240,11 +267,11 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		switch pickerView {
 		case pickerSides:
-			return 100
+			return 99
 		case pickerHowMuchDice:
 			return 100
 		case pickerTargetNumber:
-			return pickerSides.selectedRowInComponent(0) + 1
+			return pickerSides.selectedRowInComponent(0) + 2
 		default:
 			print("something's wrong in pickerView:numberOfRowsInComponent:")
 			return 1
@@ -271,7 +298,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		switch pickerView {
 		case pickerSides:
-			return "d\(row + 1)"
+			return "d\(row + 2)"
 		case pickerHowMuchDice:
 			return "\(row + 1)"
 		case pickerTargetNumber:
@@ -285,7 +312,7 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	func rollButtonAction() {
 		saveDefaults()
 		numberOfDice = pickerHowMuchDice.selectedRowInComponent(0) + 1
-		sides = pickerSides.selectedRowInComponent(0) + 1
+		sides = pickerSides.selectedRowInComponent(0) + 2
 		targetNumber = pickerTargetNumber.selectedRowInComponent(0) + 1
 		maxAgain = maxAgainButton.selected
 		maxAddDie = addDieButton.selected
@@ -318,6 +345,21 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	}
 	
 	
+	func lockPickersButtonAction() {
+		if lockPickersButton.selected {
+			pickerSides.userInteractionEnabled = false
+			pickerSides.alpha = 0.3
+			pickerTargetNumber.userInteractionEnabled = false
+			pickerTargetNumber.alpha = 0.3
+		} else {
+			pickerSides.userInteractionEnabled = true
+			pickerSides.alpha = 1.0
+			pickerTargetNumber.userInteractionEnabled = true
+			pickerTargetNumber.alpha = 1.0
+		}
+	}
+	
+	
 	func subtractOnesSwitched() {
 		if roller != nil {
 			subtractOnes = subtractOnesButton.selected
@@ -336,25 +378,28 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 	
 	
 	func loadDefaults() {
-		numberOfDice = defaults.integerForKey("numberOfDice")
+		if defaults.boolForKey("defaultsSaved") {
+			numberOfDice = defaults.integerForKey("numberOfDice")
+			sides = defaults.integerForKey("sides")
+			targetNumber = defaults.integerForKey("targetNumber")
+			maxAgainButton.selected = defaults.boolForKey("maxAgain")
+			addDieButton.selected = defaults.boolForKey("maxAddDie")
+			addDieButton.canBeSwitched = !addDieButton.selected
+			addValueButton.selected = defaults.boolForKey("maxAddValue")
+			addValueButton.canBeSwitched = !addValueButton.selected
+			subtractOnesButton.selected = defaults.boolForKey("subtractOnes")
+			lockPickersButton.selected = defaults.boolForKey("pickersLocked")
+			lockPickersButtonAction()
+		}
 		pickerHowMuchDice.selectRow(numberOfDice - 1, inComponent: 0, animated: true)
-
-		sides = defaults.integerForKey("sides")
-		pickerSides.selectRow(sides - 1, inComponent: 0, animated: true)
-		
-		targetNumber = defaults.integerForKey("targetNumber")
+		pickerSides.selectRow(sides - 2, inComponent: 0, animated: true)
 		pickerTargetNumber.selectRow(targetNumber - 1, inComponent: 0, animated: true)
-		
-		maxAgainButton.selected = defaults.boolForKey("maxAgain")
 		maxAgainButtonSwitched()
-		addDieButton.selected = defaults.boolForKey("maxAddDie")
-		addValueButton.selected = defaults.boolForKey("maxAddValue")
-		subtractOnesButton.selected = defaults.boolForKey("subtractOnes")
-		
 	}
 	
 	
 	func saveDefaults() {
+		defaults.setBool(true, forKey: "defaultsSaved")
 		defaults.setInteger(numberOfDice, forKey: "numberOfDice")
 		defaults.setInteger(sides, forKey: "sides")
 		defaults.setInteger(targetNumber, forKey: "targetNumber")
@@ -362,6 +407,12 @@ class ViewController: UIViewController, RollerDataSource, UIPickerViewDelegate, 
 		defaults.setBool(addDieButton.selected, forKey: "maxAddDie")
 		defaults.setBool(addValueButton.selected, forKey: "maxAddValue")
 		defaults.setBool(subtractOnesButton.selected, forKey: "subtractOnes")
+		defaults.setBool(lockPickersButton.selected, forKey: "pickersLocked")
+	}
+	
+	
+	@IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+		
 	}
 }
 

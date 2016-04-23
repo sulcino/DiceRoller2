@@ -36,10 +36,9 @@ class RDCVectorButton: UIControl {
 			return internalSelected
 		}
 		set {
+			lastSelected = internalSelected
 			internalSelected = newValue
-			//			if lastSelected != selected { renderer.updateShapes() }
-			renderer.updateShapes()
-			lastSelected = newValue
+			update()
 		}
 	}
 	

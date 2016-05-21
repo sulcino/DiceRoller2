@@ -59,9 +59,9 @@ class RDCVectorButton: UIControl {
 		set {
 			internalEnabled = newValue
 			if newValue {
-				renderer.updateShapes()
+				update()
 			} else {
-				renderer.updateShapes()
+				update()
 			}
 		}
 	}
@@ -214,9 +214,9 @@ private class RDCVectorButtonRenderer {
 		symbolLayer.path = drawSymbol?(width: button.bounds.width, height: button.bounds.height).CGPath
 		
 		if button.enabled {
-			button.alpha = 1.0
+			UIView.animateWithDuration(animationDuration, animations: { self.button.alpha = 1.0 })
 		} else {
-			button.alpha = CGFloat(button.disabledAlpha)
+			UIView.animateWithDuration(animationDuration, animations: { self.button.alpha = CGFloat(self.button.disabledAlpha) })
 		}
 
 		switch button.state {

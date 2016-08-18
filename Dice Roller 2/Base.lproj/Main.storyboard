@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lss-x0-NPK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lss-x0-NPK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1986,7 +1986,7 @@ pickers</string>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Jzk-o3-zaG" secondAttribute="height" multiplier="100:25" id="hZn-6B-Djz"/>
                                                 </constraints>
-                                                <string key="text">Displays how much dice is in current dice pool. This dice was rolled and outcome is shown in "hits" and "ones" fields.If no roll was made, "--" is displayed instead.</string>
+                                                <string key="text">Displays how much dice are in current dice pool. These dice were rolled and the outcome is shown in "hits" and "ones" fields. If no roll was made, "--" is displayed instead.</string>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2215,7 +2215,7 @@ pickers</string>
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecting this button activate two buttons which set required additional action." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="96n-Ue-zxp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecting this button activates two buttons which set required additional action." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="96n-Ue-zxp">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="96n-Ue-zxp" secondAttribute="height" multiplier="100:12" id="avp-Y4-xbp"/>
@@ -2360,7 +2360,7 @@ pickers</string>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qs8-v5-bR9" secondAttribute="height" multiplier="100:30" id="grd-aS-7lI"/>
                                                 </constraints>
-                                                <string key="text">Make new dice pool and roll it. "How much dice" picker determine number of dice, "sides" picker determines type of dice, "target number" picker determines minimal value a die must roll to make a hit.</string>
+                                                <string key="text">Makes new dice pool and roll it. "How much dice" picker determine number of dice, "sides" picker determines type of dice, "target number" picker determines minimal value a die must roll to make a hit.</string>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2375,7 +2375,7 @@ pickers</string>
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This delete previous dice pool and makes new one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="36i-01-coq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This deletes previous dice pool and makes new one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="36i-01-coq">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="36i-01-coq" secondAttribute="height" multiplier="100:12" id="9in-jL-MZQ"/>
@@ -2413,7 +2413,7 @@ pickers</string>
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add number of dice from &quot;how much dice&quot; picker to current dice pool, roll them and update results." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-zX-bdc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adds number of dice from &quot;how much dice&quot; picker to current dice pool, rolls them and updates results." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-zX-bdc">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fiK-zX-bdc" secondAttribute="height" multiplier="100:12" id="GhS-sw-OBg"/>
@@ -2438,7 +2438,7 @@ pickers</string>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtract number of dice from &quot;how much dice&quot; picker to current dice pool and update results." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="4cj-Dx-fuD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtracts number of dice from &quot;how much dice&quot; picker to current dice pool and updates results." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="4cj-Dx-fuD">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4cj-Dx-fuD" secondAttribute="height" multiplier="100:12" id="us5-7g-acQ"/>

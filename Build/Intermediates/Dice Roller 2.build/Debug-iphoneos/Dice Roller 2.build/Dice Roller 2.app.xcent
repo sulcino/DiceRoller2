@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>765T8HLQ5T.cz.davidrak.Dice-Roller-2</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>765T8HLQ5T</string>
+	<key>get-task-allow</key>
+	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>765T8HLQ5T.cz.davidrak.Dice-Roller-2</string>
+	</array>
+</dict>
+</plist>

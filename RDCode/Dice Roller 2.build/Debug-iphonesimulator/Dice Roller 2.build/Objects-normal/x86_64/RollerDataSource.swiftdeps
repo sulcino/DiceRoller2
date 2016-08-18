@@ -1,0 +1,38 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RollerDataSource"
+provides-nominal:
+- "P13Dice_Roller_216RollerDataSource"
+provides-member:
+- ["P13Dice_Roller_216RollerDataSource", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "RollerDataSource"
+- "Int"
+- "Bool"
+depends-member:
+- ["P13Dice_Roller_216RollerDataSource", "Bool"]
+- ["P13Dice_Roller_216RollerDataSource", "Int"]
+- ["P13Dice_Roller_216RollerDataSource", "maxAddDie"]
+- ["P13Dice_Roller_216RollerDataSource", "maxAddValue"]
+- ["P13Dice_Roller_216RollerDataSource", "maxAgain"]
+- ["P13Dice_Roller_216RollerDataSource", "numberOfDice"]
+- ["P13Dice_Roller_216RollerDataSource", "sides"]
+- ["P13Dice_Roller_216RollerDataSource", "subtractOnes"]
+- ["P13Dice_Roller_216RollerDataSource", "targetNumber"]
+depends-nominal:
+- "P13Dice_Roller_216RollerDataSource"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "2585ed4eb6e20baf3ed2fc152eef96d2"

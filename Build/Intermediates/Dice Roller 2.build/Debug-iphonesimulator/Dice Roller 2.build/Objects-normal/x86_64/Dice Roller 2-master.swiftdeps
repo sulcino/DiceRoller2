@@ -1,0 +1,14 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "0d5790b8fc84294773363d94d00c2aa1"
+build_time: [514912118, 481872000]
+inputs:
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/RDCSwitchDelegate.swift": [506508299, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/DicePool.swift": [511553053, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/Roller.swift": [512163430, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/RollerDataSource.swift": [506856722, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/ViewController.swift": [514461374, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/AppDelegate.swift": [506212419, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/RDCVectorButtonDelegate.swift": [506437689, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/RDCSwitch.swift": [513776689, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/Die.swift": [506411784, 0]
+  "/Users/davidrak/Dropbox/Development DB/iOS/Sulcino/Dice Roller 2/Dice Roller 2/RDCVectorButton.swift": [513774790, 0]

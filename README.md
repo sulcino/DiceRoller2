@@ -2,4 +2,4 @@
 > - first
 > - second
 
-- something else
+> - something else
